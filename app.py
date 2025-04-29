@@ -16,7 +16,8 @@ model = model.to(device)
 
 import os
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(CURRENT_DIR, "..", "radar_resnet18_model.pth")
+MODEL_PATH = os.path.join(CURRENT_DIR, "radar_resnet18_model.pth")
+
 
 model.load_state_dict(torch.load(MODEL_PATH, map_location=device))
 model.eval()
