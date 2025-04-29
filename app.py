@@ -35,7 +35,7 @@ st.title("🎯 TEGIN AI Radar Target Classifier")
 
 if st.button("🚀 Get New Radar Image"):
     selected_class = random.choice(classes)
-    class_folder = os.path.join("data/mstar", selected_class)
+    class_folder = os.path.join("data", selected_class)
     selected_image_path = os.path.join(class_folder, random.choice(os.listdir(class_folder)))
 
     image = Image.open(selected_image_path).convert('L')
