@@ -12,7 +12,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 model = models.resnet18(weights=None)
 model.conv1 = torch.nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
-model.fc = torch.nn.Linear(model.fc.in_features, 3)  # 3 sınıf için
+model.fc = torch.nn.Linear(model.fc.in_features, 8)  
 model = model.to(device)
 
 model.load_state_dict(torch.load("radar_resnet18_model.pth", map_location=device))
