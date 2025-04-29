@@ -27,7 +27,7 @@ transform = transforms.Compose([
 ])
 
 # Class labels
-classes = sorted(os.listdir('data/mstar/'))
+classes = sorted(os.listdir('data/'))
 
 # Streamlit Interface
 st.set_page_config(page_title="TEGIN AI Radar Target Classifier", layout="centered")
